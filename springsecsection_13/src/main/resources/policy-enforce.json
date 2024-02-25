@@ -1,0 +1,47 @@
+{
+	"realm": "springboot-be",
+	"auth-server-url": "http://localhost:8081/",
+	"resource": "springboot-dev",
+	"credentials": {
+		"secret": "kho36xod2w6kiyDjIwEzG9jLwiZJyGVo"
+	},
+	"http-method-as-scope": true,
+	"paths": [
+		{
+			"path": "/swagger-ui/*",
+			"enforcement-mode": "DISABLED"
+		},
+		{
+			"path": "/v3/*",
+			"enforcement-mode": "DISABLED"
+		},
+		{
+			"path": "/notices",
+			"enforcement-mode": "DISABLED"
+		},
+		{
+			"path": "/contact",
+			"enforcement-mode": "DISABLED"
+		},
+		{
+			"path": "/register",
+			"enforcement-mode": "DISABLED"
+		},
+		{
+			"path": "/keycloak/createuser",
+			"enforcement-mode": "DISABLED"
+		},
+		{
+			"path": "/keycloak/user/{id}",
+			"claim-information-point": {
+				"claims": {
+					"uri_claim": "{request.uri}"
+				}
+			}
+		},
+		{
+			"path": "/keycloak/*",
+			"enforcement-mode": "ENFORCING"
+		}
+	]
+}
