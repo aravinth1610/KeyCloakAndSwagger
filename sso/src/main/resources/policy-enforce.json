@@ -1,0 +1,20 @@
+{
+	"realm":"springboot-be",
+	"auth-server-url":"http://localhost:8081/",
+	"resource":"test-sso",
+	"credentials":{
+		"secret":"tvBeUXnrKlElJC0KQfxGPMGmsSlSbgq2"
+	},
+	"http-method-as-scope":true,
+	"paths":[
+		{
+			"path":"/swagger-ui/*",
+			"enforcement-mode":"DISABLED"
+		},
+		{
+			"path":"/v3/*",
+			"enforcement-mode":"DISABLED"
+		}
+		
+	]
+}
